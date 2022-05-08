@@ -21,11 +21,14 @@ public class ServerApp {
             out.println("Enter your name. If you want to exit, type \"exit\".");
             String name = "";
             boolean flagQuestionName = false, flagQuestionAge = false;
-            start: while (true) {
+            start:
+            while (true) {
                 String str = in.readLine();
-                if (str.equals("exit")){ break;}
+                if (str.equals("exit")) {
+                    break;
+                }
 
-                if (!str.isEmpty()  && !flagQuestionName && !str.equals(" ")) {
+                if (!str.isEmpty() && !flagQuestionName && !str.equals(" ")) {
                     out.println(String.format("Hi, %s. Are you 18 already? Type Y or N", str));
                     name = str;
                     flagQuestionName = true;

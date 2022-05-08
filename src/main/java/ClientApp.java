@@ -17,16 +17,16 @@ public class ClientApp {
              PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
              BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 
-         while (true) {
-             String reply = in.readLine();
-             if (reply.equals("exit")) {
-                 break;
-             } else {
-                 System.out.println(reply);
-                 String str = scan.nextLine();
-                 out.println(str);
-             }
-         }
+            while (true) {
+                String reply = in.readLine();
+                if (reply.equals("exit")) {
+                    break;
+                } else {
+                    System.out.println(reply);
+                    String str = scan.nextLine();
+                    out.println(str);
+                }
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
